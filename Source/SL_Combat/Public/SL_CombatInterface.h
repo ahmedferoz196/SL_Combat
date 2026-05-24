@@ -3,15 +3,20 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+#include "UObject/Interface.h"
 #include "SL_CombatInterface.generated.h"
 
 /**
  * 
  */
-UCLASS()
-class SL_COMBAT_API USL_CombatInterface : public UObject
+
+UINTERFACE(MinimalAPI, Blueprintable)
+class USL_CombatInterface : public UInterface
 {
 	GENERATED_BODY()
-	
+};
+
+class SL_COMBAT_API ISL_CombatInterface
+{
+	GENERATED_BODY()
 };
